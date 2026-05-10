@@ -1,0 +1,162 @@
+.experiments-section {
+  background: var(--off-white);
+}
+
+.experiments-intro {
+  font-size: 1rem;
+  color: var(--text-mid);
+  margin-top: -28px;
+  margin-bottom: 40px;
+}
+
+.experiments-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.experiment-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  display: flex;
+  gap: 32px;
+  box-shadow: var(--shadow);
+  align-items: flex-start;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.experiment-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.exp-num {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--light-green);
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 60px;
+}
+
+.exp-body {
+  flex: 1;
+}
+
+.exp-body h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--dark-green);
+  margin-bottom: 14px;
+}
+
+.exp-body p {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.exp-body p:last-child {
+  margin-bottom: 0;
+}
+
+.exp-body strong {
+  color: var(--dark-green);
+  font-weight: 700;
+}
+
+.exp-body a {
+  color: var(--mid-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.exp-body a:hover {
+  text-decoration: underline;
+}
+
+.exp-image-wrap {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.exp-image-wrap img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+.exp-image-caption {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.exp-formula {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--off-white);
+  border: 1.5px solid var(--light-green);
+  border-radius: var(--radius-sm);
+  padding: 14px 24px;
+  margin: 12px 0 16px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.05rem;
+  color: var(--dark-green);
+  font-style: italic;
+}
+
+.exp-formula-result {
+  font-style: normal;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  color: var(--mid-green);
+  font-size: 0.95rem;
+}
+
+.exp-specs {
+  display: flex;
+  gap: 32px;
+  padding: 20px 0;
+  margin: 8px 0 16px;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.exp-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.spec-val {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-green);
+  letter-spacing: -0.02em;
+}
+
+.spec-lbl {
+  font-size: 0.72rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .experiment-card {
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+  .exp-num {
+    font-size: 2rem;
+  }
+}
