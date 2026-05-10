@@ -9,7 +9,7 @@ export default function WhyThisProblem() {
         <div className="why-content reveal">
           <p className="why-intro">
             We were initially motivated by the realization that engineers were spending time on
-            soil sampling — a time-consuming, comparatively menial task — when their skills could
+            soil sampling (a time-consuming, comparatively menial task) when their skills could
             be better utilized elsewhere.
           </p>
 
@@ -28,7 +28,7 @@ export default function WhyThisProblem() {
 
             <div className="why-card">
               <div className="why-card-icon">🔬</div>
-              <h4>Sensors reduce lab reliance</h4>
+              <h4>Sensors improve data accuracy</h4>
               <p>
                 Recent research highlights integration of moisture, pH, and NPK sensors with
                 robots to provide real-time data, reducing dependence on lab results.{' '}

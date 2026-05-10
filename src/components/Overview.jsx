@@ -21,7 +21,7 @@ export default function Overview() {
           <div className="overview-stats">
             <div className="overview-stat">
               <span className="stat-value">7+ MPH</span>
-              <span className="stat-label">Top Speed</span>
+              <span className="stat-label">Speed</span>
             </div>
             <div className="overview-stat">
               <span className="stat-value">10 Samples</span>

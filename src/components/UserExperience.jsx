@@ -7,17 +7,18 @@ export default function UserExperience() {
         <div className="ux-inner reveal">
           <div className="ux-text">
             <div className="ux-badge">User Experience</div>
-            <h2 className="ux-heading">Designed for the Field, Not the Lab</h2>
+            <h2 className="ux-heading">Designed for the Field</h2>
             <p className="ux-body">
               From day one, SCOUT was built with the operator in mind. Farmers and agronomists
-              shouldn't need a manual — so we invested in a clean, intuitive frontend that lets
+              shouldn't need a manual to sample soil; so we invested in a clean, intuitive frontend that lets
               anyone plan a sampling route, dispatch the robot, and review results from a tablet
               or phone. The same engineering care that went into the hardware went into making
-              sure a first-time user can have SCOUT collecting samples in under five minutes.
+              sure a first-time user can have SCOUT collecting samples in under five minutes. A support team 
+              is also available to assist with any questions or issues, ensuring a smooth experience from setup to sample collection.
             </p>
             <p className="ux-body">
               Our interface gives you real-time feedback on probe depth, moisture readings, and
-              sample storage status — all without leaving the cab of your truck.
+              sample storage status accessible from your phone, so you can get back to the work that matters.
             </p>
             <a
               href="/ui"

@@ -10,17 +10,17 @@ const COMPONENTS = [
   {
     name: 'Movement System',
     description:
-      'Two powered motors allow SCOUT to reach over 7 MPH — sufficient speed to complete sampling of the average plot in a day. The 10-inch wheel hub motors are rated at 350 W / 36 V, placing SCOUT in the low-voltage Electric Vehicle (EV) category per ISO 6469.',
+      'Two powered motors allow SCOUT to reach over 7 MPH, which we determined to be a sufficient speed to complete sampling of the average plot in a day. The 10-inch wheel hub motors are rated at 350 W / 36 V, placing SCOUT in the low-voltage Electric Vehicle (EV) category per ISO 6469.',
   },
   {
     name: 'Probe Deployment System',
     description:
-      'The rail and probe accommodate the standard 8″ sampling depth with ¾″ ID (NC State AG-439-40). A stepper motor and lead screw can penetrate up to 300 psi compacted soil — the USDA root-growth limit — delivering 246 N of axial force at 0.45 N·m torque via T = FL / 2πη.',
+      'The rail and probe accommodate the standard 8″ sampling depth with ¾″ ID (NC State AG-439-40). A stepper motor and lead screw are sized (when fitted with a Nema 23) to penetrate up to 300 psi compacted soil, a compaction at which roots not longer take hold.',
   },
   {
     name: 'Preliminary Testing Capabilities',
     description:
-      'A soil moisture sensor mounted on the probe collects real-time moisture data while the probe is still in the ground — the optimal moment, since moisture changes during storage and transport to the lab.',
+      'A soil moisture sensor mounted on the probe collects real-time moisture data while the probe is still in the ground. This is the optimal moment for collection since moisture changes during storage and transport to the lab.',
   },
   {
     name: 'Soil Transfer System',
@@ -30,7 +30,7 @@ const COMPONENTS = [
   {
     name: 'Rotating Sample Storage System',
     description:
-      'A stepper motor drives a spur gear on a lazy-susan bearing for precise cup rotation. Once a cup is filled, the system advances to place the next empty cup in front of the gripper — capacity for 10 complete samples.',
+      'A stepper motor drives a spur gear on a lazy-susan bearing for precise cup rotation. Once a cup is filled, the system advances to place the next empty cup in front of the gripper with capacity for 10 complete samples.',
   },
   {
     name: 'Control Box',

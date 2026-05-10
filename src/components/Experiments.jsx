@@ -18,8 +18,9 @@ export default function Experiments() {
               <p>
                 FEA was performed to determine the minimum plate thickness required to prevent
                 yielding under load. The maximum simulated stress was <strong>2.117 MPa</strong>,
-                well within the material yield strength of <strong>276 MPa</strong> — a safety
-                factor of over 130×.
+                well within the material yield strength of <strong>276 MPa</strong>. This testing
+                allowed us to confidently reduce the plate thickness, saving weight and
+                material costs.
               </p>
               <div className="exp-image-wrap">
                 <img src="/plate_stress.png" alt="Von Mises stress analysis on support plate" />
@@ -45,7 +46,7 @@ export default function Experiments() {
               <p>
                 This requires at minimum a <strong>NEMA 23</strong> motor. Since max-load conditions
                 were not expected during prototype testing, a NEMA 17 (already on hand) was used,
-                significantly cutting costs.{' '}
+                in active production and field testing, we plan to increase the motor size.{' '}
                 <a
                   href="https://media.pbclinear.com/pdfs/pbc-linear-data-sheets/data-sheet-stepper-motor-support.pdf"
                   target="_blank"
