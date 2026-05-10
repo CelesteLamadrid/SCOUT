@@ -336,12 +336,12 @@ function Scene({ config, activeHotspot, setActiveHotspot, targetView, setTargetV
   )
 }
 
-/* ─── Main export ─────────────────────────────────────────────── */
 export default function ModelViewer() {
   const [config, setConfig] = useState(loadConfig)
   const [activeHotspot, setActiveHotspot] = useState(null)
   const [targetView, setTargetView] = useState(null)
   const [isConfigMode, setIsConfigMode] = useState(false)
+  const [showExplodedView, setShowExplodedView] = useState(false)
   const controlsRef = useRef()
   const cameraRef = useRef()
   const modelCenterRef = useRef(null)
@@ -437,6 +437,19 @@ export default function ModelViewer() {
           />
         )}
       </div>
+
+      <div className="exploded-view-btn-container">
+        <button className="exploded-view-btn" onClick={() => setShowExplodedView(true)}>Open Exploded View</button>
+      </div>
+
+      {showExplodedView && (
+        <div className="exploded-view-modal" onClick={() => setShowExplodedView(false)}>
+          <div className="exploded-view-content" onClick={(e) => e.stopPropagation()}>
+            <button className="exploded-view-close" onClick={() => setShowExplodedView(false)}>✕</button>
+            <img src="/ExplodedView.JPG" alt="Exploded View" className="exploded-view-image" />
+          </div>
+        </div>
+      )}
     </section>
   )
 }
