@@ -42,23 +42,33 @@ const COMPONENTS = [
 /* ─── Default config ──────────────────────────────────────────── */
 const DEFAULT_CONFIG = {
   hotspots: [
-    { position: [-1.2, -0.8, 0.8], camera: { position: [-3, -1, 2.5],  target: [-1, -0.5, 0] } },
-    { position: [0,    1.6,  0],   camera: { position: [0, 3.5, 3],    target: [0, 1.2, 0] } },
-    { position: [0.4,  0.8, -0.8], camera: { position: [1.5, 1.5, -3], target: [0.3, 0.8, -0.5] } },
-    { position: [1.2,  0,   0.3],  camera: { position: [3.5, 0.5, 1],  target: [1, 0, 0] } },
-    { position: [1,    0,   1.2],  camera: { position: [3, 0, 3.5],    target: [0.8, 0, 0.8] } },
-    { position: [-0.5, 0.6, 1],    camera: { position: [-2, 1.5, 3],   target: [-0.3, 0.4, 0.8] } },
+    { position: [1.1, 0.3, 1.3],  camera: { position: [1.4, 0.5, 1.7], target: [0.0, 0.0, 0.0] } }, // Movement System
+    { position: [0.7, 1.0, 1.3],  camera: { position: [0.8, 1.0, 1.5], target: [0.0, 0.0, 0.0] } }, // Probe Deployment
+    { position: [0.7, 0.7, 1.3],  camera: { position: [0.7, 0.8, 1.4], target: [0.0, 0.0, 0.0] } }, // Preliminary Testing
+    { position: [0.6, 0.6, 0.9],  camera: { position: [0.5, 0.5, 0.6], target: [0.7, 0.8, 1.3] } }, // Soil Transfer
+    { position: [1.0, 0.5, 1.3],  camera: { position: [0.5, 0.5, 2.1], target: [0.7, 0.8, 1.3] } }, // Rotating Storage
+    { position: [0.9, 0.9, 1.2],  camera: { position: [1.1, 1.0, 1.3], target: [0.0, 0.0, 0.0] } }, // Control Box
   ],
   defaultCamera: { position: [4, 2.5, 4], target: [0, 0, 0] },
 }
 
+const CONFIG_VERSION = 2
+
 function loadConfig() {
   try {
     const raw = localStorage.getItem('scout-model-config')
-    return raw ? JSON.parse(raw) : DEFAULT_CONFIG
+    if (!raw) return DEFAULT_CONFIG
+    const parsed = JSON.parse(raw)
+    // If the saved config is from an older version, discard it
+    if (parsed.version !== CONFIG_VERSION) return DEFAULT_CONFIG
+    return parsed
   } catch {
     return DEFAULT_CONFIG
   }
+}
+
+function saveConfig(cfg) {
+  localStorage.setItem('scout-model-config', JSON.stringify({ ...cfg, version: CONFIG_VERSION }))
 }
 
 /* ─── 3D model — sets orbit center to model's bounding box center */
@@ -192,7 +202,7 @@ function ConfigPanel({ config, setConfig, controlsRef, cameraRef, onClose }) {
   }
 
   const save = () => {
-    localStorage.setItem('scout-model-config', JSON.stringify(local))
+    saveConfig(local)
     setConfig(local)
     setSaved(true)
   }
