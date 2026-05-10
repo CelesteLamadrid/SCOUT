@@ -11,7 +11,7 @@ const COMPONENTS = [
   },
   {
     name: 'Probe Deployment System',
-    media: '/probe_test.gif',
+    media: '/Probe_Test.gif',
     type: 'gif',
     description:
       'Stepper motor rotates the lead screw for translational motion, driving the probe into the ground and retracting it. It first calibrates at the top for depth consistency. (4× Speed)',
@@ -39,7 +39,7 @@ const COMPONENTS = [
   },
   {
     name: 'Control Box',
-    media: '/control_box.HEIC',
+    media: '/control_box.png',
     type: 'image',
     description:
       'The control box neatly houses all electronics — Arduino, motor controllers, and wiring — providing organised protection and easy access for maintenance.',
